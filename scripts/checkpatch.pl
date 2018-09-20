@@ -2561,7 +2561,7 @@ sub process {
 		}
 
 # Check the patch for a From:
-		if (decode("MIME-Header", $line) =~ /^From:\s*(.*)/) {
+		if (decode("MIME-Header", $line) =~ /^Author:\s*(.*)/) {
 			$author = $1;
 			$author = encode("utf8", $author) if ($line =~ /=\?utf-8\?/i);
 			$author =~ s/"//g;
